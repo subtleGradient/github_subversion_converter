@@ -11,7 +11,7 @@ module Conversor
      # svn_destiny_name is the name of the checkout destiny repo.
      attr_accessor :output, :svn_address_origin, :svn_address_destiny, :svn_origin_name, :svn_destiny_name, :final_revision_that_you_want_to_mirror, :log_file_of_origin
       
-     def initialize(output=STDOUT, svn_address_origin, svn_address_destiny)
+     def initialize(output=STDOUT, svn_address_origin=nil, svn_address_destiny=nil)
        @output = output    
        @svn_origin_name = "origin"  #Just the name, not the file path.
        @svn_destiny_name = "destiny" #Just the name, not the file path.       
